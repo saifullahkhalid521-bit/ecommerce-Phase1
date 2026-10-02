@@ -7,6 +7,8 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: antiquewhite;
+  padding: 10px 10px;
 }
 #navUl{
   display: flex;
@@ -18,4 +20,12 @@ nav{
 #navUl li a{
   text-decoration: none;
   color: black;
+}
+.footer-content{
+  position: fixed;
+  bottom: 0;
+  height: 30vh;
+  width: 100%;
+  background-color: royalblue;
+  
 }
