@@ -1,0 +1,59 @@
+/* Mobile View Styles (768px se kam screen size ke liye) */
+@media (max-width: 768px) {
+  /* Hamburger Button ko mobile par dikhao */
+  .nav-toggle {
+    display: block !important;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .hamburger, 
+  .hamburger::before, 
+  .hamburger::after {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+
+  .hamburger::before, 
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before { top: -8px; }
+  .hamburger::after { top: 8px; }
+
+  /* Navbar menu ko mobile par drop-down banao */
+  #navUl {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: antiquewhite;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Pehle menu ko chhupa do */
+    display: none;
+  }
+
+  /* Jab JS 'active' class add kare tab menu dikhao */
+  #navUl.active {
+    display: flex;
+  }
+
+  #navUl li {
+    margin: 0;
+  }
+}
