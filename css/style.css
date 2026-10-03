@@ -41,6 +41,12 @@ nav {
   color: black;
 }
 
+#navUl a.active {
+  color: royalblue;
+  font-weight: bold;
+  border-bottom: 2px solid royalblue;
+}
+
 /* Desktop par hamburger button chupa rahega */
 .nav-toggle {
   display: none;

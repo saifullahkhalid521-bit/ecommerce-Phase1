@@ -12,6 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
           navUl.classList.toggle("active");
         })
       }
+
+      
+      const currentPage = window.location.pathname.split("/").pop();
+
+      const navLinks = document.querySelectorAll("#navUl a");
+
+      navLinks.forEach((link) => {
+        const linkHref =link.getAttribute("href");
+        if(linkHref === currentPage){
+          link.classList.add("active");
+        }
+      })
     })
     .catch(error => console.error("Error loading navigation:", error));
 
