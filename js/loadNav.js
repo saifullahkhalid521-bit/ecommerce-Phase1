@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (navToggle && navUl) {
         navToggle.addEventListener("click", () => {
           navUl.classList.toggle("active");
+          navToggle.classList.toggle("open");
         })
       }
 
