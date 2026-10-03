@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex:1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -15,16 +29,22 @@ nav {
 
 #navUl {
   display: flex;
+  gap: 50px;
 }
 
 #navUl li {
   list-style: none;
-  margin: 0 10px;
 }
 
 #navUl li a {
   text-decoration: none;
   color: black;
+}
+
+#navUl a.active {
+  color: royalblue;
+  font-weight: bold;
+  border-bottom: 2px solid royalblue;
 }
 
 /* Desktop par hamburger button chupa rahega */
@@ -33,8 +53,8 @@ nav {
 }
 
 .footer-content {
-  position: fixed;
-  bottom: 0;
+  /* position: fixed; */
+  /* bottom: 0; */
   width: 100%;
   padding: 20px 0px;
   background-color: royalblue;

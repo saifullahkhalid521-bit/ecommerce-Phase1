@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("/navbar.html")
+  fetch("navbar.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("navbar-placeholder").innerHTML = data;
@@ -10,12 +10,25 @@ document.addEventListener("DOMContentLoaded", () => {
       if (navToggle && navUl) {
         navToggle.addEventListener("click", () => {
           navUl.classList.toggle("active");
+          navToggle.classList.toggle("open");
         })
       }
+
+      
+      const currentPage = window.location.pathname.split("/").pop();
+
+      const navLinks = document.querySelectorAll("#navUl a");
+
+      navLinks.forEach((link) => {
+        const linkHref =link.getAttribute("href");
+        if(linkHref === currentPage){
+          link.classList.add("active");
+        }
+      })
     })
     .catch(error => console.error("Error loading navigation:", error));
 
-    fetch("/footer.html")
+    fetch("footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer-placeholder").innerHTML = data;

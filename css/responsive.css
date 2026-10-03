@@ -31,6 +31,20 @@
   .hamburger::before { top: -8px; }
   .hamburger::after { top: 8px; }
 
+  .nav-toggle.open .hamburger {
+    background: transparent;
+  }
+
+  .nav-toggle.open .hamburger::before{
+    top:0;
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle.open .hamburger::after{
+    top:0;
+    transform: rotate(-45deg);
+  }
+
   /* Navbar menu ko mobile par drop-down banao */
   #navUl {
     position: absolute;
@@ -51,9 +65,18 @@
   /* Jab JS 'active' class add kare tab menu dikhao */
   #navUl.active {
     display: flex;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
   }
 
   #navUl li {
     margin: 0;
   }
+}
+
+#navUl li a {
+  display: block;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
 }
