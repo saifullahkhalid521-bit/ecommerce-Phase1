@@ -5,8 +5,8 @@ function renderProducts(products){
         <div class="product-card">
       <img src="${product.thumbnail}" alt="${product.title}">
       <h3>${product.title}</h3>
-      <p>${product.price}</p>
-      <p>${product.rating}</p>
+      <p class = "price">$${product.price}</p>
+      <p class="rating">⭐ ${product.rating}</p>
       <p>${product.category}</p>
     </div>
     `).join("");
