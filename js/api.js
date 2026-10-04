@@ -7,4 +7,3 @@ async function fetchProducts() {
     console.log(err);
   }
 }
-fetchProducts();
