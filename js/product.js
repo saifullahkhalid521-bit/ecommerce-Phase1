@@ -6,13 +6,17 @@ if(!productId){
 }
 else{
     fetchSingleProduct(productId).then(singleProduct => {
-    product_detail.innerHTML = `
+    product_detail.innerHTML = ` 
+    <div class = "product-image">
     <img src="${singleProduct.thumbnail}" alt="${singleProduct.title}">
+    </div>
+    <div class = "product-info">
       <h3>${singleProduct.title}</h3>
       <p class = "price">$${singleProduct.price}</p>
-      <p class="rating">⭐ ${singleProduct.rating}</p>
+      <p class = "rating">⭐ ${singleProduct.rating}</p>
       <p>${singleProduct.description}</p>
-      <p>${singleProduct.category}</p>
+      <p class = "category">${singleProduct.category}</p>
+     </div> 
     `
   })
 }

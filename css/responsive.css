@@ -80,3 +80,9 @@
   width: 100%;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  #product-detail {
+    grid-template-columns: 1fr; 
+  }
+}
