@@ -7,14 +7,11 @@ function getCart(){
     return JSON.parse(localCart);
   }
 }
-console.log(getCart());
 
 
 function saveCart(cart){
   localStorage.setItem("cart" , JSON.stringify(cart));
 }
-saveCart([{ id: 1, title: "Test", price: 10, thumbnail: "x" }]);
-console.log(getCart());
 
 
 function isInCart(id){
