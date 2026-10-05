@@ -126,3 +126,42 @@ nav {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+
+/* single card style */
+#product-detail {
+padding: 20px;
+display: grid;
+grid-template-columns: 400px 1fr;
+gap: 30px;
+border: 1px solid #ddd;
+border-radius: 8px;
+align-items: start;
+}
+
+.product-image img{
+  /* max-width: 400px; */
+  width: 100%;
+  height: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-info h3{
+font-size: 17px;
+font-weight: 600;
+}
+
+.product-info .price{
+  font-size: 18px;
+}
+
+.product-info .rating , .product-info .category{
+  font-size: 13px;
+  color: #666;
+}
