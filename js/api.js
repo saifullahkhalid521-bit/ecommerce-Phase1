@@ -7,3 +7,13 @@ async function fetchProducts() {
     console.log(err);
   }
 }
+
+async function fetchSingleProduct(id){
+try {
+  const response = await fetch(`https://dummyjson.com/products/${id}`)
+  const resJson = await response.json();
+  return resJson;
+}catch(err){
+  console.log(err);
+}
+}
