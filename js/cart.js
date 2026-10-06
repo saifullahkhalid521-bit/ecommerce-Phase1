@@ -18,9 +18,6 @@ function isInCart(id){
   const cart = getCart();
   return cart.some(product => product.id === id)
 }
-console.log(isInCart(1));
-console.log(isInCart(99));
-console.log(isInCart(5));
 
 
 function addToCart(product){
@@ -37,9 +34,3 @@ function addToCart(product){
   }
   saveCart(cart);
 }
-
-localStorage.clear();
-addToCart({ id: 1, title: "Lipstick", price: 12.99, thumbnail: "x" });
-addToCart({ id: 1, title: "Lipstick", price: 12.99, thumbnail: "x" });
-addToCart({ id: 2, title: "Mascara", price: 9.99, thumbnail: "y" });
-console.log(getCart());
