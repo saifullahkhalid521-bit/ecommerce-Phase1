@@ -16,7 +16,7 @@ function renderCart() {
   <img src="${item.thumbnail}" alt="${item.title} ">
   <div class="cart-item-info">
     <h3>${item.title} </h3>
-    <p class="price" $${item.price}></p>
+    <p class="price">$${item.price}</p>
     <p>Quantity: ${item.quantity}</p>
   </div>
   </div>
