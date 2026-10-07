@@ -262,3 +262,152 @@ font-weight: 600;
   text-align: center;
   padding: 60px 20px;
 }
+
+/* ------------------------------------------------------------------- */
+
+#cart-container {
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: #f9f9f9;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.cart-item-info .price {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+/* ----------------------- */
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  transition: background 0.2s ease;
+}
+
+.qty-btn:hover {
+  background: #f0f0f0;
+}
+
+.qty {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.remove-btn {
+  padding: 6px 12px;
+  background: #ffe0e0;
+  color: #c00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  margin-left: 10px;
+  transition: background 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: #ffcccc;
+}
+/* -------------- */
+.cart-total {
+  text-align: right;
+  font-size: 22px;
+  padding: 20px 0;
+  border-top: 2px solid #eee;
+  margin-top: 20px;
+  color: #000;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+/* ---------------------------- */
+.empty-cart {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.empty-cart p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: royalblue;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #2545b8;
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: #e0e0e0;
+}
