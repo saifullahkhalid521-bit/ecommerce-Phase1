@@ -17,7 +17,12 @@ function renderCart() {
   <div class="cart-item-info">
     <h3>${item.title} </h3>
     <p class="price">$${item.price}</p>
-    <p>Quantity: ${item.quantity}</p>
+    <div class="cart-item-controls">
+      <button class="qty-btn" data-action="decrease" data-id="${item.id}">−</button>
+      <span class="qty">${item.quantity}</span>
+      <button class="qty-btn" data-action="increase" data-id="${item.id}">+</button>
+      <button class="remove-btn" data-id="${item.id}">Remove</button>
+    </div>
   </div>
   </div>
     `).join("");
@@ -30,4 +35,26 @@ function renderCart() {
   </div>
   `;
 };
+
+const container = document.getElementById("cart-container");
+
+container.addEventListener("click", (e) => {
+  const target = e.target;
+
+  if(target.matches(".qty-btn , .remove-btn")){
+    const id = Number(target.dataset.id);
+    const action = target.dataset.action;
+
+    if (action === "increase"){
+      increaseQuantity(id);
+    }else if(action === "decrease"){
+      decreaseQuantity(id);
+    }else if (target.matches(".remove-btn")){
+      removeFromCart(id);
+    }
+
+    renderCart();
+  }
+});
+
 renderCart();
