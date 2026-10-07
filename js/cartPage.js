@@ -35,12 +35,26 @@ function renderCart() {
   </div>
   `;
 };
-renderCart();
 
-// if (action === "increase") {
-//   increaseQuantity(id);
-// } else if (action === "decrease") {
-//   decreaseQuantity(id);
-// } else if (target.matches(".remove-btn")) {
-//   removeFromCart(id);
-// }
+const container = document.getElementById("cart-container");
+
+container.addEventListener("click", (e) => {
+  const target = e.target;
+
+  if(target.matches(".qty-btn , .remove-btn")){
+    const id = Number(target.dataset.id);
+    const action = target.dataset.action;
+
+    if (action === "increase"){
+      increaseQuantity(id);
+    }else if(action === "decrease"){
+      decreaseQuantity(id);
+    }else if (target.matches(".remove-btn")){
+      removeFromCart(id);
+    }
+
+    renderCart();
+  }
+});
+
+renderCart();
