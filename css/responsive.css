@@ -109,3 +109,21 @@
     text-align: center;
   }
 }
+
+/*mobile wishlist respons */
+@media (max-width: 768px){
+  .wish-item-img{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .wish-btns{
+   width: 100%;
+   flex-direction: column; 
+  }
+
+  .wishlist-btn{
+  width: 100%;
+  }
+}
+
