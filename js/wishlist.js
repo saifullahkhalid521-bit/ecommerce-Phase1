@@ -29,3 +29,9 @@ function addToWishlist(product){
 
   saveWishlist(wishlist);
 }
+
+function removeFromWishlist(id){
+  const wishlist = getWishlist();
+  const newList = wishlist.filter(item => item.id !== id);
+  saveWishlist(newList);
+}
