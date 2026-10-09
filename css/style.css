@@ -491,3 +491,66 @@ font-weight: 600;
   font-size: 18px;
   margin-bottom: 20px;
 }
+
+/* ------------------------------------------------------------------ */
+
+/* checkout */
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.checkout-form-section,
+.checkout-summary-section {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.checkout-form-section h2,
+.checkout-summary-section h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: royalblue;
+}
+
+#checkout-form button[type="submit"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 15px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+}
