@@ -10,7 +10,7 @@ function renderOrderSummary() {
   // items ka HTML
   const itemsHTML = cart.map(item => `
     <div class="summary-item">
-      <span class="summary-qty">${item.quantity}×</span>
+      <span class="summary-qty">${item.quantity} ×</span>
       <span class="summary-title">${item.title}</span>
       <span class="summary-price">$${(item.price * item.quantity).toFixed(2)}</span>
     </div>
