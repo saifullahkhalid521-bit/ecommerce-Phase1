@@ -1,4 +1,5 @@
 const error_box = document.getElementById("error-box");
+const error_box2 = document.getElementById("error-box2");
 async function fetchProducts() {
   try{
     const response = await fetch("https://Dummyjson.com/products")
@@ -22,6 +23,13 @@ try {
   const resJson = await response.json();
   return resJson;
 }catch(err){
-  console.log(err);
+      console.log(err);
+    console.log("HTTP something went wrong!");
+
+    error_box2.style.display = "block";
+    error_box2.innerHTML = `
+    <p>HTTP something went wrong!</p>
+    <button>Try Again</button>
+    `
 }
 }

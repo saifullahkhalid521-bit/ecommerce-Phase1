@@ -82,7 +82,7 @@ nav {
   margin-top: 20px;
 }
 
-.loading-message {
+.loading-message , .loading-message2{
   grid-column: 1 / -1;
   margin: 30px auto 0;
   padding: 14px 22px;
@@ -94,7 +94,7 @@ nav {
   box-shadow: 0 6px 16px rgba(37, 69, 184, 0.08);
 }
 
-#error-box {
+#error-box , #error-box2{
   display: none;
   margin-top: 24px;
   padding: 18px 20px;
@@ -105,12 +105,12 @@ nav {
   box-shadow: 0 10px 24px rgba(132, 32, 41, 0.08);
 }
 
-#error-box p {
+#error-box p , #error-box2 p{
   margin: 0 0 12px;
   font-weight: 600;
 }
 
-#error-box button {
+#error-box button , #error-box2 button {
   border: none;
   border-radius: 6px;
   padding: 10px 16px;
@@ -120,7 +120,7 @@ nav {
   cursor: pointer;
 }
 
-#error-box button:hover {
+#error-box button:hover , #error-box2 button:hover{
   background: #bb2d3b;
 }
 
