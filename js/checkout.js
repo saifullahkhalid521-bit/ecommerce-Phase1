@@ -35,6 +35,12 @@ const errorDiv = document.getElementById("form-error");
 checkoutForm.addEventListener("submit" , (e) => {
   e.preventDefault();
 
+  if (getCart().length === 0) {
+    errorDiv.textContent = "Your cart is empty.";
+    errorDiv.style.display = "block";
+    return;
+  }
+
   const formData = new FormData(checkoutForm);
   const data = Object.fromEntries(formData);
 
@@ -64,7 +70,6 @@ checkoutForm.addEventListener("submit" , (e) => {
   document.querySelector(".checkout-container").style.display = "none";
   localStorage.removeItem("cart");
 });
-
 
 
 
