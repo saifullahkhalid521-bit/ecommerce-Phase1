@@ -28,3 +28,22 @@ function renderOrderSummary() {
 }
 
 renderOrderSummary();
+
+const checkoutForm = document.getElementById("checkout-form");
+const errorDiv = document.getElementById("form-error");
+
+checkoutForm.addEventListener("submit" , (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(checkoutForm);
+  const data = Object.fromEntries(formData);
+
+  const requiredFields = ["fullName", "email", "phone", "address", "city", "zip"];
+  const allFilled = requiredFields.every(field => data[field].trim() !== "");
+});
+
+
+
+
+
+
