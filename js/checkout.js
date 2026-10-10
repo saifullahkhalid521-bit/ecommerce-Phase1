@@ -40,6 +40,29 @@ checkoutForm.addEventListener("submit" , (e) => {
 
   const requiredFields = ["fullName", "email", "phone", "address", "city", "zip"];
   const allFilled = requiredFields.every(field => data[field].trim() !== "");
+
+  if(!allFilled){
+  errorDiv.textContent = "Please fill all required fields.";
+  errorDiv.style.display = "block";
+  return;
+}
+
+  const orderNumber = Math.floor(Math.random() * 1000000);
+  const confirmation = document.getElementById("order-confirmation");
+
+  confirmation.innerHTML = `
+    <div class="confirmation-box">
+    <h2>Order Placed! 🎉</h2>
+    <p>Thank you, ${data.fullName}!</p>
+    <p>Your order number is <strong>#${orderNumber}</strong></p>
+    <p>A confirantion email has been sent to <strong>${data.email}</strong></p>
+    <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+    </div>
+  `;
+  confirmation.style.display = "block";
+
+  document.querySelector(".checkout-container").style.display = "none";
+  localStorage.removeItem("cart");
 });
 
 
