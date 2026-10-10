@@ -20,6 +20,10 @@ async function fetchProducts() {
 async function fetchSingleProduct(id){
 try {
   const response = await fetch(`https://dummyjson.com/products/${id}`)
+
+  if(!response.ok){
+    throw new Error("Product not found");
+  }
   const resJson = await response.json();
   return resJson;
 }catch(err){
@@ -28,8 +32,9 @@ try {
 
     error_box2.style.display = "block";
     error_box2.innerHTML = `
-    <p>HTTP something went wrong!</p>
+    <p>HTTP Product not found!</p>
     <button>Try Again</button>
     `
 }
+
 }
