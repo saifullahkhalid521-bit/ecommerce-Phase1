@@ -1,14 +1,20 @@
 function renderCart() {
   const cart = getCart();
   const container = document.getElementById("cart-container");
+  const link_btns = document.getElementsByClassName("btn");
 
   if(cart.length === 0) {
     container.innerHTML = `
     <div class="empty-cart">
       <p>Your cart is empty</p>
-      <a href="product.html" class="btn-primary">Continue Shopping</a>
+      <a href="products.html" class="btn-primary">Continue Shopping</a>
     </div>
     `;
+
+    for(let btn of link_btns){
+      btn.style.display = "none";
+    }
+    
     return ;
   }
   container.innerHTML = cart.map(item => `
@@ -56,5 +62,4 @@ container.addEventListener("click", (e) => {
     renderCart();
   }
 });
-
 renderCart();
