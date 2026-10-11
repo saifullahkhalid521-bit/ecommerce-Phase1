@@ -1,5 +1,6 @@
 const error_box = document.getElementById("error-box");
 const error_box2 = document.getElementById("error-box2");
+
 async function fetchProducts() {
   try{
     const response = await fetch("https://Dummyjson.com/products")
