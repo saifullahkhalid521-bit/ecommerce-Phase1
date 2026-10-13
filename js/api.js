@@ -37,5 +37,20 @@ try {
     <button>Try Again</button>
     `
 }
+}
 
+// -------------------------------------------------------------------------------------
+async function fetchCategories() {
+  try {
+    const response = await fetch("https://dummyjson.com/products/category-list");
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch categories");
+    }
+
+    const categories = await response.json();
+    return categories;
+  } catch (err) {
+    throw err;
+  }
 }

@@ -21,3 +21,22 @@ async function renderFeaturedProducts(){
   }
 }
 renderFeaturedProducts();
+
+// --------------------------------------------------------------------------------------
+async function renderCategories() {
+  const container = document.getElementById("categories-grid");
+
+  try {
+    const categories = await fetchCategories();
+
+    container.innerHTML = categories.map(category => `
+      <a href="products.html" class="category-card">
+        ${category}
+      </a>
+    `).join("");
+  } catch (err) {
+    container.innerHTML = `<p>Failed to load categories.</p>`;
+  }
+}
+
+renderCategories();

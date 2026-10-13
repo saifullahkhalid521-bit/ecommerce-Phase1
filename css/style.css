@@ -707,3 +707,32 @@ font-weight: 600;
   margin-bottom: 15px;
   font-size: 24px;
 }
+
+/* --------------------------------------------------------------------------------------- */
+#categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.category-card {
+  display: block;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  border-color: royalblue;
+  color: royalblue;
+}
