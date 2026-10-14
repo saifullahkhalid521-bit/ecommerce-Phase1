@@ -736,3 +736,102 @@ font-weight: 600;
   border-color: royalblue;
   color: royalblue;
 }
+
+/* -------------------ABOUT-------------------------- */
+/* 
+.about-section {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.about-section h1 {
+  margin-bottom: 20px;
+}
+
+.about-section h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-section ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.about-section li {
+  margin-bottom: 5px;
+} */
+
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #666;
+  font-size: 16px;
+}
+
+.about-content {
+  margin-bottom: 40px;
+}
+
+.about-content h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid royalblue;
+  display: inline-block;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  padding: 8px 16px;
+  background: #f0f4ff;
+  color: royalblue;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  padding: 8px 0 8px 30px;
+  position: relative;
+}
+
+.features-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: royalblue;
+  font-weight: bold;
+}

@@ -30,9 +30,9 @@ async function renderCategories() {
     const categories = await fetchCategories();
 
     container.innerHTML = categories.map(category => `
-      <a href="products.html" class="category-card">
+      <div class="category-card">
         ${category}
-      </a>
+      </div>
     `).join("");
   } catch (err) {
     container.innerHTML = `<p>Failed to load categories.</p>`;
