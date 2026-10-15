@@ -37,7 +37,7 @@ function renderCart() {
 
   container.innerHTML += `
   <div class = "cart-total">
-    <strong>Total: $${total.toFixed(2)}</strong>
+    <strong>Total: $${formatPrice(total)}</strong>
   </div>
   `;
 };

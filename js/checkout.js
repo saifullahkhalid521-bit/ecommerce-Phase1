@@ -12,7 +12,7 @@ function renderOrderSummary() {
     <div class="summary-item">
       <span class="summary-qty">${item.quantity} ×</span>
       <span class="summary-title">${item.title}</span>
-      <span class="summary-price">$${(item.price * item.quantity).toFixed(2)}</span>
+      <span class="summary-price">$${formatPrice(item.price * item.quantity)}</span>
     </div>
   `).join("");
 
@@ -22,7 +22,7 @@ function renderOrderSummary() {
   container.innerHTML = `
     ${itemsHTML}
     <div class="summary-total">
-      <strong>Total: $${total.toFixed(2)}</strong>
+      <strong>Total: $${formatPrice(total)}</strong>
     </div>
   `;
 }
